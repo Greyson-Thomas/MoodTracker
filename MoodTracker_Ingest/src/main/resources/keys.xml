@@ -1,0 +1,12 @@
+<apis>
+  <api>
+    <service>This</service>
+    <key>no</key>
+    <secret>yes</secret>
+  </api>
+    <api>
+    <service>no</service>
+    <key>yes</key>
+    <secret>no</secret>
+  </api>
+</apis>

@@ -1,0 +1,132 @@
+<questions>
+  <question>
+    <type>bool</type>
+    <header>exercise</header>
+    <text>Did you Exercise today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>phone</header>
+    <text>Was using your phone the first activity performed today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>outside</header>
+    <text>Did you go outside today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>meal</header>
+    <text>Did you Eat a Meal today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>bhabit</header>
+    <text>Did you Participate in a Bad habit today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>frdspeak</header>
+    <text>Did you speak with your friends digitally today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>frphspeak</header>
+    <text>Did you speak with your friends physically today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>fmdspeak</header>
+    <text>Did you speak with your family digitally today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>fmphspeak</header>
+    <text>Did you speak with your family physically today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>junk</header>
+    <text>Did you eat junk food today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>read</header>
+    <text>Did you Read today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>shower</header>
+    <text>Did you Shower today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>clean</header>
+    <text>Did you Clean today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>teeth</header>
+    <text>Did you Brush Your Teeth today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>emotions</header>
+    <text>Did you Acknolwedge your emotions today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>ghabit</header>
+    <text>Did you particpate in a Good Habit today</text>
+  </question>
+  <question>
+    <type>bool</type>
+    <header>bowel</header>
+    <text>Did you have a Bowel Movement today</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numOutside</header>
+    <text>Number of times you went outside</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numUnhealthy</header>
+    <text>Number of unhealthy meals you ate</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numHealthy</header>
+    <text>Number of healthy meals you ate</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numMealsEnjoyed</header>
+    <text>Number of meals you enjoyed</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numBHabits</header>
+    <text>Number of bad habits you performed</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numGHabits</header>
+    <text>Number of good habits you performed</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numShower</header>
+    <text>Number of showers you took</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numTeeth</header>
+    <text>Number of times you brushed your teeth</text>
+  </question>
+  <question>
+    <type>num</type>
+    <header>numMedia</header>
+    <text>Number of hours spent on digital media</text>
+  </question>
+</questions>

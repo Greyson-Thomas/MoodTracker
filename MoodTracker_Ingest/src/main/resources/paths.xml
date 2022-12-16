@@ -1,0 +1,22 @@
+<paths>
+  <path>
+    <name>sqlite</name>
+    <string>jdbc:sqlite:./src/main/resources/MoodTrackerDBRaw.db</string>
+  </path>
+  <path>
+    <name>python</name>
+    <string>../MoodTrack_python/data/raw/moodtracker_raw.csv</string>
+  </path>
+  <path>
+    <name>keys</name>
+    <string>./src/main/resources/keys.xml</string>
+  </path>
+  <path>
+    <name>users</name>
+    <string>./src/main/resources/user.xml</string>
+  </path>
+  <path>
+    <name>questions</name>
+    <string>./src/main/resources/questions.xml</string>
+  </path>
+</paths>
