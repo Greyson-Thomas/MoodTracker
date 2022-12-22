@@ -1,5 +1,9 @@
 <weatherinfo>
-  <location>Austin</location>
-  <lat>30.35</lat>
-  <long>-97.72</long>
+  <location>
+    <country>US</country>
+    <state>Texas</state>
+    <city>Richardson</city>
+    <lat>30.35</lat>
+    <long>-97.72</long>
+  </location>
 </weatherinfo>

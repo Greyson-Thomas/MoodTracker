@@ -1,8 +1,8 @@
 <apis>
   <api>
-    <service>This</service>
-    <key>no</key>
-    <secret>yes</secret>
+    <service>geo</service>
+    <key>b913f556a2d58eb564d04eb396e9536b</key>
+    <secret>NA</secret>
   </api>
     <api>
     <service>no</service>

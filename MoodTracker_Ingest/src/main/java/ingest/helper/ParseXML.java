@@ -98,23 +98,23 @@ public class ParseXML {
     return questionList;
   }
 
-  public static String parseUser() throws Exception{
+  public static String parseUserLocationInfo() throws Exception{
     DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
     DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
     Document doc = dBuilder.parse(parsePaths("users"));
 
+    String locationQuery = "";
+
     doc.getDocumentElement().normalize();
-    NodeList nList = doc.getElementsByTagName("weatherinfo");
+    NodeList nList = doc.getElementsByTagName("location");
     for(int i = 0; i < nList.getLength(); i++){
       Node nNode = nList.item(i);
       if(nNode.getNodeType() == Node.ELEMENT_NODE){
         Element eElement = (Element) nNode;
-        System.out.println(eElement.getElementsByTagName("location").item(0).getTextContent());
-        System.out.println(eElement.getElementsByTagName("lat").item(0).getTextContent());
-        System.out.println(eElement.getElementsByTagName("long").item(0).getTextContent());
+        locationQuery = eElement.getElementsByTagName("city").item(0).getTextContent() + "," +eElement.getElementsByTagName("state").item(0).getTextContent() + "," + eElement.getElementsByTagName("country").item(0).getTextContent();
       }
     }
-    return "";
+    return locationQuery;
   }
 
   public static void main(String[] args){

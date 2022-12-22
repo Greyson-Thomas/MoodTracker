@@ -15,7 +15,13 @@ import org.json.simple.parser.JSONParser;
 
 
 public class WeatherService {
-  public static String apiURI = "https://api.open-meteo.com/v1/forecast?latitude=30.35&longitude=-97.72&current_weather=true";
+  public static String apiURIBase = "https://api.open-meteo.com/v1/forecast?";
+
+  //"https://api.open-meteo.com/v1/forecast?latitude=30.35&longitude=-97.72&current_weather=true"
+
+  public static String apiLat = "latitude=";
+  public static String apiLong = "&longitude=";
+  public static String apiWeatherConditions = "&current_weather=true";
 
 
   public static Map<Integer,String> weatherCodes = Map.ofEntries(
@@ -51,24 +57,38 @@ public class WeatherService {
 
   public static String computeWeather() throws IOException{
     try{
-    HttpClient client = HttpClient.newHttpClient();
-    HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(apiURI))
-            .build();
+      Map<String, String> locationMap = services.LocationService.computeLocation();
+      apiLat += locationMap.get("lat");
+      apiLong += locationMap.get("long");
 
-    HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
+      String apiURI = apiURIBase + apiLat + apiLong + apiWeatherConditions;
+      HttpClient client = HttpClient.newHttpClient();
+      HttpRequest request = HttpRequest.newBuilder()
+              .uri(URI.create(apiURI))
+              .build();
 
-    JSONParser parser = new JSONParser();
-    JSONObject apiObject = (JSONObject) parser.parse(response.body());
-    JSONObject weatherObject = (JSONObject) apiObject.get("current_weather");
-    Long weatherCode = (Long) weatherObject.get("weathercode");
+      HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
 
-    return weatherCodes.get(weatherCode.intValue());
+      JSONParser parser = new JSONParser();
+      JSONObject apiObject = (JSONObject) parser.parse(response.body());
+      JSONObject weatherObject = (JSONObject) apiObject.get("current_weather");
+      Long weatherCode = (Long) weatherObject.get("weathercode");
+
+      return weatherCodes.get(weatherCode.intValue());
     
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }
     return "Was not able to work retrieve weather";
+  }
+
+  public static void main(String[] args){
+    try {
+      System.out.println(computeWeather());
+    } catch (Exception e) {
+      // TODO: handle exception
+    }
+    
   }
 }
 
