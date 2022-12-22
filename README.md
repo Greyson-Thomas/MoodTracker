@@ -26,4 +26,4 @@
 
 # License
 
-MIT &copy Greyson Thomas
+MIT &copy; Greyson Thomas
